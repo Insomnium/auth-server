@@ -1,0 +1,6 @@
+server:
+  servlet.context-path: /auth
+
+logging:
+  level:
+    org.springframework: DEBUG
