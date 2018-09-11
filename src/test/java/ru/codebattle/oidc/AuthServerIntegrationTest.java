@@ -1,4 +1,4 @@
-package org.baeldung.test;
+package ru.codebattle.oidc;
 
 import ru.coddebattle.oidc.AuthorizationServerApplication;
 import org.junit.Test;

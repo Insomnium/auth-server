@@ -3,7 +3,7 @@ auth:
     - {
         clientId: 'codebattle',
         clientSecret: 'jmOnxA6lqmeUYTDbVcBmndFJNYQ0W9vc',
-        authorizedGrantTypes: [ 'authorization_code' ],
+        authorizedGrantTypes: [ 'authorization_code', 'password', 'client_credentials' ],
         scope: [ 'read', 'openid' ],
         autoApproveScopes: [ 'read', 'openid' ],
         registeredRedirectUris: [ 'http://localhost:8080/login/oauth2/code/battle-oidc', 'http://localhost:8080/login/oauth2/code/codebattle-oidc' ],
