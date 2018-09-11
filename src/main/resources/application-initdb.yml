@@ -1,0 +1,21 @@
+auth:
+  sample-clients:
+    - {
+        clientId: 'codebattle',
+        clientSecret: 'jmOnxA6lqmeUYTDbVcBmndFJNYQ0W9vc',
+        authorizedGrantTypes: [ 'authorization_code' ],
+        scope: [ 'read', 'openid' ],
+        autoApproveScopes: [ 'read', 'openid' ],
+        registeredRedirectUris: [ 'http://localhost:8080/login/oauth2/code/battle-oidc', 'http://localhost:8080/login/oauth2/code/codebattle-oidc' ],
+        accessTokenValiditySeconds: 3600,
+        refreshTokenValiditySeconds: 7200
+      }
+  sample-users:
+    - {
+        email: test@example.com,
+        login: 'test@example.com',
+        name: 'John Doe',
+        password: '123',
+        roles: [ 'ROLE_USER' ],
+        locked: false
+      }

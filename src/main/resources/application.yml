@@ -12,6 +12,16 @@ spring:
           google:
             client-id: ...
             client-secret: ...
+  data:
+    mongodb:
+      database: oidc
+      host: localhost
+      port: 27017
+
+auth:
+  default-roles:
+    - ROLE_USER
+  account-validity-days: 3650
 
 logging:
   level:
