@@ -28,9 +28,9 @@ public class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
             .withClient("codebattle")
             .secret(passwordEncoder.encode("jmOnxA6lqmeUYTDbVcBmndFJNYQ0W9vc"))
             .authorizedGrantTypes("authorization_code")
-            .scopes("read")
+            .scopes("read", "openid")
             .autoApprove("read", "openid")
-            .redirectUris("http://localhost:8080/login/oauth2/code/battle-oidc")
+            .redirectUris("http://localhost:8080/login/oauth2/code/battle-oidc", "http://localhost:8080/login/oauth2/code/codebattle-oidc")
             .accessTokenValiditySeconds(3600)
         ; // 1 hour
     }
