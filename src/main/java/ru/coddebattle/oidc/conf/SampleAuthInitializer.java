@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 
 
 /**
- * @author Igor_Petrov@epam.com
+ * @author Ins_
  * Created at 9/11/2018
  */
 @Component

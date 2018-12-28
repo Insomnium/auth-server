@@ -6,7 +6,7 @@ import ru.coddebattle.oidc.domain.UserEntity;
 import java.util.Optional;
 
 /**
- * @author Igor_Petrov@epam.com
+ * @author Ins_
  * Created at 9/11/2018
  */
 public interface UserMongoRepository extends MongoRepository<UserEntity, String> {

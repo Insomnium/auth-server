@@ -11,7 +11,7 @@ import java.util.Set;
 import static ru.coddebattle.oidc.domain.ClientDetailsEntity.MONGO_COLLECTION;
 
 /**
- * @author Igor_Petrov@epam.com
+ * @author Ins_
  * Created at 9/11/2018
  */
 @Document(collection = MONGO_COLLECTION)

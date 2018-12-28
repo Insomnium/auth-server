@@ -7,7 +7,7 @@ import org.springframework.security.oauth2.core.OAuth2AuthenticationException;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 
 /**
- * @author Igor_Petrov@epam.com
+ * @author Ins_
  * Created at 9/11/2018
  */
 @RequiredArgsConstructor

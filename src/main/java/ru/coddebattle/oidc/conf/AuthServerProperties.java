@@ -9,7 +9,7 @@ import ru.coddebattle.oidc.domain.UserEntity;
 import java.util.List;
 
 /**
- * @author Igor_Petrov@epam.com
+ * @author Ins_
  * Created at 9/11/2018
  */
 @ConfigurationProperties("auth")

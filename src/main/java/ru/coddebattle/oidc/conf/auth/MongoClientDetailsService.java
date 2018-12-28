@@ -11,7 +11,7 @@ import ru.coddebattle.oidc.domain.ClientDetailsEntity;
 import ru.coddebattle.oidc.repo.ClientDetailsMongoRepository;
 
 /**
- * @author Igor_Petrov@epam.com
+ * @author Ins_
  * Created at 9/11/2018
  */
 @Service

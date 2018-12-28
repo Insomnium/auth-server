@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import ru.coddebattle.oidc.repo.UserMongoRepository;
 
 /**
- * @author Igor_Petrov@epam.com
+ * @author Ins_
  * Created at 9/11/2018
  */
 @Service
