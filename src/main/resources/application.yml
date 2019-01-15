@@ -14,9 +14,13 @@ spring:
             client-secret: ...
   data:
     mongodb:
-      database: oidc
+      database: auth
       host: localhost
       port: 27017
+
+  thymeleaf:
+    cache: false
+
 
 auth:
   default-roles:
