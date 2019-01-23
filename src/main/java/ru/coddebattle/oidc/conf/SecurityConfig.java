@@ -33,7 +33,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception { // @formatter:off
         http.requestMatchers()
-            .antMatchers("/login", "/login/oauth2", "/oauth/authorize", "/oauth2/authorization/**", "/login/oauth2/code/**", "/css/**", "/js/**", "/img/**")
+            .antMatchers("/login", "/login/oauth2", "/oauth/authorize", "/oauth2/authorization/**", "/login/oauth2/code/**", "/css/**", "/js/**", "/img/**", "/profile")
             .and()
             .authorizeRequests()
                 .antMatchers("/login", "/css/**", "/js/**", "/img/**")

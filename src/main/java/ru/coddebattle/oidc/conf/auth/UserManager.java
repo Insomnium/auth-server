@@ -25,8 +25,8 @@ public final class UserManager {
 
     UserEntity populateUser(OAuth2User oauth2User) {
         Map<String, Object> userAttributes = oauth2User.getAttributes();
-        String email = extract(userAttributes, "email");
-
+        String email = this.<String>extract(userAttributes, "email").toLowerCase();
+        
         Optional<UserEntity> user = userMongoRepository.findByEmail(email);
 
         return user.orElseGet(() -> {

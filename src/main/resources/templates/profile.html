@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+    <link rel="stylesheet" th:href="@{/css/docs.css}">
+    <link rel="stylesheet" th:href="@{/css/font-awesome.css}">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link rel="script" th:href="@{/static/js/bootstrap.js}">
+    <title>Login Page</title></head>
+<body>
+<div class="container-fluid">
+    <form id="profile" name="f" th:action="@{/profile}" method="POST">
+        <div class="form-group">
+            <label for="InputLogin1">Login</label>
+            <input type="text" name="username" class="form-control" id="InputLogin1" placeholder="Username" readonly>
+        </div>
+        <div class="form-group">
+            <label for="InputEmail">Email</label>
+            <input type="email" name="email" class="form-control" id="InputEmail" th:value="${user.email}">
+        </div>
+        <input th:name="${_csrf.parameterName}" th:value="${_csrf.token}" type="hidden">
+        <!--<button type="submit" class="btn btn-primary">Submit</button>-->
+    </form>
+</div>
+</body>
+</html>
