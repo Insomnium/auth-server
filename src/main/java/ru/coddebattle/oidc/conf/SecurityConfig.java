@@ -10,6 +10,9 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.web.filter.CorsFilter;
 import ru.coddebattle.oidc.conf.auth.OAuth2MappingUserService;
 import ru.coddebattle.oidc.conf.auth.OidcMappingUserService;
 import ru.coddebattle.oidc.conf.auth.UserManager;
@@ -30,9 +33,24 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return super.authenticationManagerBean();
     }
 
+    @Bean
+    @CorsOff
+    public CorsFilter corsFilter() {
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        CorsConfiguration config = new CorsConfiguration();
+        config.setAllowCredentials(true);
+        config.addAllowedOrigin("*");
+        config.addAllowedHeader("*");
+        config.addAllowedMethod("*");
+        source.registerCorsConfiguration("/**", config);
+        return new CorsFilter(source);
+    }
+
     @Override
     protected void configure(HttpSecurity http) throws Exception { // @formatter:off
-        http.requestMatchers()
+        http.cors()
+            .and()
+                .requestMatchers()
             .antMatchers("/login", "/login/oauth2", "/oauth/authorize", "/oauth2/authorization/**", "/login/oauth2/code/**", "/css/**", "/js/**", "/img/**", "/profile")
             .and()
             .authorizeRequests()
